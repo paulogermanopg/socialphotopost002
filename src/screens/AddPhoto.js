@@ -70,13 +70,13 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
         width: '90%',
-        height: Dimensions.get('window').width * 3/4,
+        height: Dimensions.get('window').width /2,
         backgroundColor: '#EEE',
         marginTop: 10,
     },
     image: {
         width: Dimensions.get('window').width,
-        height: Dimensions.get('window').width * 3/4,
+        height: Dimensions.get('window').width /2,
         resizeMode: 'center',
     },
     button: {
