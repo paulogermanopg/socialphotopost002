@@ -7,7 +7,7 @@ export const login = user => {
     }
 }
 
-export const ogout = () => {
+export const logout = () => {
     return {
         type: USER_LOGGED_OUT
     }

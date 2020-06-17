@@ -2,7 +2,7 @@ import { USER_LOGGED_IN, USER_LOGGED_OUT } from '../actions/actionTypes'
 
 const initialState = {
     name: null,
-    email: null
+    email: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,8 +10,8 @@ const reducer = (state = initialState, action) => {
         case USER_LOGGED_IN:
             return {
                 ...state,
-                name: action.playloed.name,
-                email: action.playloed.email
+                name: action.payload.name,
+                email: action.payload.email
             }
         case USER_LOGGED_OUT:
             return  {
