@@ -23,7 +23,7 @@ exports.uploadImage = functions.https.onRequest((request, response) => {
                 destination: `/posts/${id}.jpg`,
                 metadata: {
                     metadata: {
-                        contentType: 'image/jpg',
+                        contentType: 'image/jpeg',
                         firebaseStorageDownloadTokens: id
                     }
                 }
