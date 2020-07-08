@@ -7,7 +7,8 @@ import { setMessage } from './store/actions/message'
 class App extends Component {
     componentDidUpdate = () => {
         if(this.props.text && this.props.text.toString().trim()) {
-            Alert.alert(this.props.title || 'Message', this.props.text.toString())
+            Alert.alert(this.props.title || 'Mensagem',
+                this.props.text.toString())
             this.props.clearMessage()
         }
     }
@@ -23,14 +24,14 @@ const mapStateToProps = ({ message }) => {
     return {
         title: message.title,
         text: message.text
-    } 
+    }
 }
 
-const mapDispatchToprops = dispatch => {
+const mapDispatchToProps = dispatch => {
     return {
         clearMessage: () =>
             dispatch(setMessage({ title: '', text: '' }))
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToprops)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
